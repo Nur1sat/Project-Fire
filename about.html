@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Economics Insights</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">Economics Insights</a>
+            <div class="curse">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </ul></div>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section" id="about">
+            <br>
+            <br>
+            <h2>About Economics Insights</h2>
+            <p>Welcome to Economics Insights, where we turn complex economic theories into engaging stories that resonate with your everyday experiences. Our goal is to provide you with the tools to understand the forces shaping our world.</p>
+
+            <div class="animated-container">
+                <h2>Why Economics Matters</h2>
+                <p>Economics is not just about money; it's the lens through which we can understand human behavior and societal choices. Here's why economics is crucial:</p>
+                    <p><strong>Empowerment:</strong> Economics helps you make smart decisions about personal finance, investments, and savings.</p>
+                    <p><strong>Policy Impact:</strong> Economics guides policies affecting healthcare, education, and the environment.</p>
+                    <p><strong>Global Perspectives:</strong> Economics literacy helps you grasp international trade, immigration, and global markets.</p>
+            </div>
+
+            <div class="animated-container">
+                <h2>Fun Facts About Economics</h2>
+                <p>Economics can be surprising! Here are a few fun facts:</p>
+                    <p>The concept of 'opportunity cost' explains the benefits you miss out on when choosing one option over another.</p>
+                    <p>President Nixon’s decision in 1971 to end the gold standard changed global finance forever.</p>
+                    <p>Adam Smith's 'invisible hand' describes how self-interest can lead to positive outcomes for society.</p>
+            </div>
+
+            <div class="animated-container">
+                <h2>Our Mission</h2>
+                <p>At Economics Insights, we aim to demystify economics through accessible content that connects theory to real-world applications. Join us on this journey to make learning engaging and insightful.</p>
+            </div>
+
+            <div class="animated-container">
+                <h2>Engage with Us</h2>
+                <p>We invite you to explore, discuss, and share your thoughts. Whether you’re a student, a professional, or simply curious, there’s something here for you!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Economics Insights. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        const themeToggle = document.getElementById('themeToggle');
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                themeToggle.innerHTML = '🌞'; 
+            } else {
+                themeToggle.innerHTML = '🌙'; 
+            }
+        });
+
+        // Add scroll animations
+        const animatedContainers = document.querySelectorAll('.animated-container');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+        animatedContainers.forEach(container => observer.observe(container));
+    </script>
+</body>
+</html>

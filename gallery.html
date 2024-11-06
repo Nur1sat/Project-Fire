@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economics Quotes</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <div class="header">
+        
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">Economics Insights</a>
+            <div class="curse">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </ul></div>
+            
+        </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <header>
+        <h1>More Quotes on <span>Economy</span></h1>
+    </header>
+
+    <!-- Quotes Section -->
+    <main class="quotes-container">
+        <!-- Quote Card 1 -->
+        <div class="quote-card">
+            <blockquote>
+                “He that spareth in everything is an inexcusable niggard. He that spareth in nothing is an inexcusable madman. The mean is to spare in what is least necessary, and to lay out more liberally in what is most required.”
+            </blockquote>
+            <div class="author">
+                <img src="https://yastatic.net/naydex/yandex-search/ET6nmx497/46e5a1f1B/7AV4It1vNIbvrGxcWZkgM4JsZifBCmJUAFBW8Irq3FcYnLz9oZ2LuAFTPCbOnxintGKIYV0_ZUetSe4t3OmFHKCgNBIl2_06U0CdrJkBvJvyCWYPwTpmZHz9n" alt="Author's Image">
+                <span>Adam Smith</span>
+            </div>
+        </div>
+
+        <div class="quote-card">
+            <blockquote>
+                “Economic growth is not only unnecessary, but ruinous.”
+            </blockquote>
+            <div class="author">
+                <img src="https://avatars.mds.yandex.net/i?id=e5f91c91b2f006aea7c0402c9db638e4_l-11271031-images-thumbs&n=13" alt="Author's Image">
+                <span>Alexander Solzhenitsyn</span>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Economics Insights. All rights reserved.</p>
+    </footer>
+    
+</body>
+<script>
+     const themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    if (document.body.classList.contains('dark-theme')) {
+        themeToggle.innerHTML = '🌞'; 
+    } else {
+        themeToggle.innerHTML = '🌙'; 
+    }
+});
+
+
+const animatedContainers = document.querySelectorAll('.animated-container');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+        }
+    });
+});
+animatedContainers.forEach(container => observer.observe(container));
+</script>
+</html>

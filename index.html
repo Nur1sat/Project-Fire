@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Economics Insights</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">Economics Insights</a>
+            <div class="curse">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </ul></div>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <video autoplay muted loop class="background-video">
+                <source src="assets/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <div class="hero-overlay"></div>
+        
+            <div class="hero-content">
+                <h1>Welcome to Economics Insights</h1>
+                <p>Discover the fascinating field of economics, from market trends to global impacts. Dive into insights that shape our world.</p>
+                <a href="about.html" class="cta-button">Explore More</a>
+            </div>
+        </section>
+        
+        
+        <section class="introduction">
+            <h2>Why Study Economics?</h2>
+            <p>Economics affects everything, from our daily decisions to global policies. Gain a deeper understanding of its principles to make more informed choices.</p>
+            <p>From understanding how markets work to analyzing the impacts of government policies, studying economics equips you with the tools to navigate the complexities of the world.</p>
+        </section>
+
+        <section class="featured-topics">
+            <h2>Key Topics in Economics</h2>
+            <div class="topics-grid">
+                <div class="topic-card" data-aos="fade-up">
+                    <h3>Microeconomics</h3>
+                    <p>Explore how individual actors make decisions about resources, pricing, and consumption. Understand supply and demand dynamics and their effects on market equilibrium.</p>
+                </div>
+                <div class="topic-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Macroeconomics</h3>
+                    <p>Understand broader economic factors, such as inflation, unemployment, and GDP. Analyze how fiscal and monetary policies impact the economy as a whole.</p>
+                </div>
+                <div class="topic-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Economic Theories</h3>
+                    <p>Learn about major economic theories that shape current policies and practices. Explore classical, Keynesian, and behavioral economics among others.</p>
+                </div>
+                <div class="topic-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Global Trade</h3>
+                    <p>Analyze the impact of trade, tariffs, and globalization on different economies. Understand trade agreements and their implications for economic growth.</p>
+                </div>
+                <div class="topic-card" data-aos="fade-up" data-aos-delay="400" id="card4">
+                    <h3>Market Structures</h3>
+                    <p>Dive into different market structures including perfect competition, monopoly, and oligopoly. Assess how market power affects pricing and output.</p>
+                </div>
+                <div class="topic-card" data-aos="fade-up" data-aos-delay="500" id="card5">
+                    <h3>Behavioral Economics</h3>
+                    <p>Explore the psychological factors that influence economic decisions. Learn how cognitive biases and heuristics can impact financial choices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="current-trends">
+            <h2>Current Trends in Economics</h2>
+            <p>The world of economics is ever-evolving. Here are some of the key trends shaping the landscape today:</p>
+            <ul>
+                <li data-aos="fade-right"><strong>Sustainable Development:</strong> The growing focus on sustainability is influencing economic policies and practices globally.</li>
+                <li data-aos="fade-right" data-aos-delay="100"><strong>Digital Currencies:</strong> The rise of cryptocurrencies and blockchain technology is reshaping financial systems.</li>
+                <li data-aos="fade-right" data-aos-delay="200"><strong>Remote Work:</strong> The shift towards remote work has significant implications for labor markets and economic productivity.</li>
+                <li data-aos="fade-right" data-aos-delay="300"><strong>Inequality:</strong> Economic disparities are under increasing scrutiny, prompting discussions on wealth distribution and social justice.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Economics Insights. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const themeToggle = document.getElementById('themeToggle');
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                themeToggle.innerHTML = '☀️'; 
+            } else {
+                themeToggle.innerHTML = '🌙'; 
+            }
+        });
+    </script>
+</body>
+</html>
