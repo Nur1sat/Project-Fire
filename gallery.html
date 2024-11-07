@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economics Quotes</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
     <div class="header">
-        
         <nav class="navbar">
             <a href="index.html" class="nav-logo">Economics Insights</a>
             <div class="curse">
             <ul class="nav-links">
+                <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Log In</a></li>
-                <button id="themeToggle" class="theme-toggle">🌙</button>
+                <button id="themeToggle" class="theme-toggle">🌙</button></div>
+                <span onclick="openNav()">☰</span>
+
             </ul></div>
             
         </nav>
@@ -81,5 +85,17 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 animatedContainers.forEach(container => observer.observe(container));
+document.getElementById("hamburger").addEventListener("click", function() {
+    const navLinksWrapper = document.querySelector(".nav-links-wrapper");
+    navLinksWrapper.classList.toggle("open");
+});
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 </script>
 </html>

@@ -221,4 +221,12 @@ body.dark-theme h1, h2{
 body.dark-theme .contact-container{
     color: #ffffff;
     background-color: black;
+}               
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
+.curse.open .nav-links {
+    display: flex;
+  }

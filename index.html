@@ -15,12 +15,17 @@
             <a href="index.html" class="nav-logo">Economics Insights</a>
             <div class="curse">
             <ul class="nav-links">
+                <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="nav-real">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Log In</a></li>
-                <button id="themeToggle" class="theme-toggle">🌙</button>
+                <button id="themeToggle" class="theme-toggle">🌙</button></div></div>
+                <span onclick="openNav()">☰</span>
+
             </ul></div>
             
         </nav>
@@ -107,6 +112,19 @@
                 themeToggle.innerHTML = '🌙'; 
             }
         });
+document.getElementById("hamburger").addEventListener("click", function() {
+    const navLinksWrapper = document.querySelector(".curse");
+    navLinksWrapper.classList.toggle("open");
+});
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
     </script>
 </body>
 </html>

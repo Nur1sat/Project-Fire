@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contact.css">
+    
 </head>
 <body>
   
@@ -12,6 +14,7 @@
         
         <nav class="navbar">
             <a href="index.html" class="nav-logo">Economics Insights</a>
+            <button id="hamburger" class="hamburger">&#9776;</button> 
             <div class="curse">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -35,9 +38,7 @@
     <main class="contact-container">
         <section class="contact-info">
             <h2>Get in Touch</h2>
-            <p>You can reach us via the form, email, or social media.</p>
-            
-            
+            <p>You can reach us via the form, email, or social media.</p>            
         </section>
 
         <section class="contact-form">
@@ -56,6 +57,9 @@
             </form>
         </section>
     </main>
+    <footer class="footer">
+        <p>&copy; 2024 Economics Insights. All rights reserved.</p>
+    </footer>
 </body>
 <script>const themeToggle = document.getElementById('themeToggle');
 
@@ -66,5 +70,10 @@
         } else {
             themeToggle.innerHTML = '🌙'; 
         }
-    });</script>
+    });
+document.getElementById("hamburger").addEventListener("click", function() {
+    const navLinksWrapper = document.querySelector(".curse");
+    navLinksWrapper.classList.toggle("open");
+});
+</script>
 </html>
