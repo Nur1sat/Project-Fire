@@ -153,39 +153,64 @@ header h1 span {
     }
 
 }
-@media (max-width: 650px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    #card4{
-        grid-column: 1;
-    }
+.sidenav .closebtn {
+    display: none;
+  }
 
-    .hero p {
-        font-size: 1rem;
-    }
+  .ok{
+    display: none;
+  }
 
-    .curse {
-        display: none;
-    }
+  
+  
+  
+  @media (max-width: 650px) {
 
-    .introduction h2, .featured-topics h2, .current-trends h2 {
-        font-size: 2rem;
-    }
-
-    .topic-card {
-        padding: 1rem;
-    }
-    .header{
-        text-align: center;
-        justify-content: center;
-    }
-    header{
-        text-align: center;
-    }
-
-
-}
+    .ok{
+        display: block;
+        color: white;
+      }    
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      #mySidenav{
+        display: flex;
+        flex-direction: column;
+      }
+  }
 @media (max-width: 860px) {
     .hero h1 {
         font-size: 2.5rem;

@@ -21,63 +21,8 @@ body{
     flex-direction: column;
 }
 
-.header {
-    background-color: var(--primary-color);
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    display: grid;
-    align-items: center;
 
-}
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.2rem;
-}
-
-.nav-logo {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-.theme-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--secondary-color);
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
 header {
     text-align: center;
     padding: 20px;
@@ -173,23 +118,6 @@ header p {
 }
 
 
-@media (max-width: 774px) {
-    .contact-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .navbar{
-        text-align: center;
-        justify-content: center;
-    }
-
-    .contact-info, .contact-form {
-        width: 45%;
-    }
-    .curse{
-        display: none;
-    }
-}
 body.dark-theme {
     background-color: #2C2C2C;
     color: #FFFFFF;
@@ -229,4 +157,62 @@ body.dark-theme .contact-container{
 }
 .curse.open .nav-links {
     display: flex;
+  }
+  .sidenav .closebtn {
+    display: none;
+  }
+
+  .ok{
+    display: none;
+  }
+
+  
+  
+  
+  @media (max-width: 650px) {
+
+    .ok{
+        display: block;
+        color: white;
+      }    
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      #mySidenav{
+        display: flex;
+        flex-direction: column;
+      }
   }

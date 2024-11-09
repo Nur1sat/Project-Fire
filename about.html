@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Economics Insights</title>
-    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="base.css"> -->
+    
    
 </head>
 <body>
@@ -13,17 +14,34 @@
         <nav class="navbar">
             <a href="index.html" class="nav-logo">Economics Insights</a>
             <div class="curse">
-            <ul class="nav-links">
+            <ul class="nav-links sidenav" id="mySidenav">
+                <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Log in</a></li>
+                <li><a href="login.html">Log In</a></li>
                 <button id="themeToggle" class="theme-toggle">🌙</button>
             </ul></div>
-            
+            <span onclick="openNav()" class="ok">☰</span>
         </nav>
     </header>
+    <script>
+function openNav() {
+    if (window.innerWidth < 650) {
+        document.getElementById("mySidenav").style.width = "250px";}
+    }
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+window.addEventListener("resize", function () {
+    if (window.innerWidth >= 650) {
+      document.getElementById("mySidenav").style.width = "250px";
+    } else {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+});
+    </script>
 
     <main>
         <section class="about-section" id="about">
@@ -86,10 +104,7 @@
             });
         });
         animatedContainers.forEach(container => observer.observe(container));
-document.getElementById("hamburger").addEventListener("click", function() {
-    const navLinksWrapper = document.querySelector(".nav-links-wrapper");
-    navLinksWrapper.classList.toggle("open");
-});
+
 
     </script>
 </body>
