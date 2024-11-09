@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
-
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -12,15 +10,6 @@
     --background-color: #f4f4f9;
     --highlight-color: #e74c3c;
 }
-.hamburger {
-    font-size: 28px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none;
-  }
-
 body{
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -28,7 +17,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-
 .header {
     background-color: var(--primary-color);
     padding: 1rem;
@@ -38,12 +26,12 @@ body{
     z-index: 10;
     display: grid;
     align-items: center;
-
 }
-
 .navbar {
     display: flex;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    align-self: center;
     justify-content: space-between;
     font-size: 1.2rem;
 }
@@ -55,6 +43,7 @@ body{
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 
 .nav-links {
     list-style: none;
@@ -244,9 +233,7 @@ video{
 #card4{
     grid-column: 2;
 }
-/* body.dark-theme h1, h2{
-    color: #6200ff;
-} */
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -260,6 +247,7 @@ video{
     }
 
     .nav-links {
+        display: flex;
         flex-direction: row;
     }
 
@@ -323,47 +311,7 @@ video{
         padding: 1rem;
     }
 
-    header{
-        text-align: center;
-    }
-    .sidenav {
-        height: 100%; /* 100% Full-height */
-        width: 0; /* 0 width - change this with JavaScript */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Stay on top */
-        top: 0; /* Stay at the top */
-        left: 0;
-        background-color: #111; /* Black*/
-        overflow-x: hidden; /* Disable horizontal scroll */
-        padding-top: 60px; /* Place content 60px from the top */
-        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-      }
       
-      /* The navigation menu links */
-      .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-      }
-      
-      /* When you mouse over the navigation links, change their color */
-      .sidenav a:hover {
-        color: #f1f1f1;
-      }
-      
-      /* Position and style the close button (top right corner) */
-      .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
-      
-      /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
       #main {
         transition: margin-left .5s;
         padding: 20px;
@@ -429,56 +377,6 @@ video{
     }
 }
 
-/* body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-} */
-
-/* .header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-} */
-
-.nav-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #FFD700;
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
 .about-section {
     padding: 2rem 1rem;
     max-width: 800px;
@@ -535,6 +433,9 @@ body.dark-theme .nav-links a {
 body.dark-theme .topic-card{
     background-color: black;
 }
+body.dark-theme blockquote{
+    color: white;
+}
 body.dark-theme .nav-links a:hover {
     color: #FFD700; 
 }
@@ -553,18 +454,3 @@ body.dark-theme h1, h2{
         transform: translateY(0);
     }
 }
-/* The side navigation menu */
-
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
- .closebtn{
-    display: none;
- }
- .sidenav{
-    display: flex;
-    gap: 20px;
- }
- .nav-links span{
-    display: none;
- }

@@ -1,16 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #fff;
-    line-height: 1.6;
-}
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -33,10 +21,10 @@ header h1 {
 }
 
 header h1 span {
-    color: #e67e22; /* Accent color for 'Economy' */
+    color: #e67e22; 
 }
 
-/* Quotes Container */
+
 .quotes-container {
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +32,7 @@ header h1 span {
     padding: 20px;
 }
 
-/* Quote Card */
+
 .quote-card {
     background-color: #fff;
     color: #333;
@@ -83,7 +71,7 @@ header h1 span {
     right: 10px;
 }
 
-/* Author Section */
+
 .author {
     display: flex;
     align-items: center;

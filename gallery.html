@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economics Quotes</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="styles.css">   
 </head>
 <body>
     <div class="header">
@@ -13,18 +13,13 @@
             <a href="index.html" class="nav-logo">Economics Insights</a>
             <div class="curse">
             <ul class="nav-links">
-                <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Log In</a></li>
-                <button id="themeToggle" class="theme-toggle">🌙</button></div>
-                <span onclick="openNav()">☰</span>
-
+                <button id="themeToggle" class="theme-toggle">🌙</button>
             </ul></div>
-            
         </nav>
     </div>
     <br>
@@ -35,9 +30,7 @@
         <h1>More Quotes on <span>Economy</span></h1>
     </header>
 
-    <!-- Quotes Section -->
     <main class="quotes-container">
-        <!-- Quote Card 1 -->
         <div class="quote-card">
             <blockquote>
                 “He that spareth in everything is an inexcusable niggard. He that spareth in nothing is an inexcusable madman. The mean is to spare in what is least necessary, and to lay out more liberally in what is most required.”
@@ -89,13 +82,6 @@ document.getElementById("hamburger").addEventListener("click", function() {
     const navLinksWrapper = document.querySelector(".nav-links-wrapper");
     navLinksWrapper.classList.toggle("open");
 });
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
 </script>
 </html>
